@@ -30,6 +30,22 @@ section {
     margin-block: 1rem;
 }
 
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-bottom: -0.3rem;
+}
+
+.icon.small {
+    width: 20px;
+    height: 16px;
+    margin-bottom: -0.2rem;
+}
+
+.icon.border {
+    border-radius: 4px;
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;

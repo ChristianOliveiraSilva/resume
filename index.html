@@ -5,18 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume - Christian de Oliveira Silva</title>
     <link rel="stylesheet" href="style.css">
+
+    <script>
+        function calculateAge() {
+            const birthdateElement = document.querySelector('[data-birthdate]');
+            const birthdateStr = birthdateElement.getAttribute('data-birthdate');
+            
+            const [day, month, year] = birthdateStr.split('-').map(Number);
+            
+            const birthDate = new Date(year, month - 1, day);
+            const today = new Date();
+            
+            let age = today.getFullYear() - birthDate.getFullYear();
+            const monthDiff = today.getMonth() - birthDate.getMonth();
+            
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+            
+            birthdateElement.textContent = age;
+        }
+        
+        window.onload = function() {
+            calculateAge();
+        }
+    </script>
 </head>
 
 <body>
     <header>
         <h1>Christian de Oliveira Silva</h1>
-        <p>Senior Full-Stack Developer | Tech Lead | PHP | Laravel | Python | TypeScript | React.js | Vue.js</p>
+        <p>Senior Full-Stack Developer | Tech Lead | Freelancer | Laravel | Python | TypeScript | React.js</p>
         <p>Technical Course and Bachelor's Degree at IFMS</p>
-        <p>23 years old | Três Lagoas, MS, Brazil</p>
-        <p>📞 +55 67 99336-9450 | ✉ christian.oliveira.trabalho@gmail.com</p>
+        <p><span data-birthdate="23-04-2001"></span> years old | Três Lagoas, MS, Brazil <img class="icon small" src="./assets/brazil.webp"></p>
+        <p><img class="icon" src="./assets/WhatsApp.svg.webp"> +55 67 99336-9450 | ✉ christian.oliveira.trabalho@gmail.com</p>
         <p>
-            GitHub: <a href="#">ChristianOliveiraSilva</a> |
-            LinkedIn: <a href="#">christian-oliveira-silva</a>
+            <img class="icon" src="./assets/github.png"> <a href="https://github.com/ChristianOliveiraSilva">ChristianOliveiraSilva</a> |
+            <img class="icon border" src="./assets/linkedin.webp"> <a href="https://www.linkedin.com/in/christian-oliveira-silva">christian-oliveira-silva</a>
         </p>
     </header>
 
@@ -37,35 +62,52 @@
             <p style="float: right;"><small>Technologies I have used throughout my career</small></p>
             <h2 class="title">Skills</h2>
             
-            <div style="padding-bottom: 1rem;">
-                <h1 class="subtitle">Backend</h1>
-                <p>PHP (Laravel, Laravel Nova, Filament, Symfony, Yii PHP Framework, CakePHP)</p>
-                <p>Node.js (Express, NestJS, Next.js, Nuxt.js, AdonisJS)</p>
-                <p>Python (Django, Flask)</p>
-                <p>Java (Spring Boot, Spring Framework)</p>
-            </div>
-
-            <div style="padding-bottom: 1rem;">
-                <h1 class="subtitle">Frontend</h1>
-                <p>TypeScript & JavaScript</p>
-                <p>React.js</p>
-                <p>Vue.js</p>
-                <p>jQuery</p>
-                <p>Alpine.js</p>
-                <p>Bootstrap</p>
-                <p>Tailwind CSS</p>
-                <p>Sass</p>
-                <p>Angular</p>
-            </div>
-        
-            <div style="padding-bottom: 1rem;">
-                <h1 class="subtitle">Mobile</h1>
-                <p>Flutter</p>
-                <p>React Native</p>
-                <p>Kotlin/Java</p>
-            </div>
-
             <div class="row">
+                <div class="col">
+                    <h1 class="subtitle">Backend</h1>
+                    <p>PHP (Laravel, Symfony)</p>
+                    <p>Filament, Laravel Nova</p>
+                    <p>Yii PHP Framework, CakePHP</p>
+                    <p>Node.js (Express, NestJS, Next.js, Nuxt.js, AdonisJS)</p>
+                    <p>Python (Django, Flask)</p>
+                    <p>Java (Spring Boot, Spring Framework)</p>
+                </div>
+
+                <div class="col">
+                    <h1 class="subtitle">Frontend</h1>
+                    <p>TypeScript & JavaScript</p>
+                    <p>React.js</p>
+                    <p>Vue.js</p>
+                    <p>Angular</p>
+                    <p>jQuery, Alpine.js</p>
+                    <p>Bootstrap, Tailwind CSS</p>
+                    <p>Sass</p>
+                </div>
+            
+                <div class="col">
+                    <h1 class="subtitle">Mobile</h1>
+                    <p>Flutter</p>
+                    <p>React Native</p>
+                    <p>Kotlin/Java</p>
+                </div>
+            
+                <div class="col">
+                    <h1 class="subtitle">SQL Databases</h1>
+                    <p>MySQL</p>
+                    <p>PostgreSQL</p>
+                    <p>SQL Server</p>
+                    <p>Oracle Database</p>
+                    <p>SQLite</p>
+                </div>
+            
+                <div class="col">
+                    <h1 class="subtitle">NoSQL Databases</h1>
+                    <p>MongoDB</p>
+                    <p>Redis</p>
+                    <p>Firebase</p>
+                    <p>Elasticsearch</p>
+                </div>
+
                 <div class="col">
                     <h1 class="subtitle">Tests</h1>
                     <p>Jest</p>
@@ -85,42 +127,22 @@
                 <div class="col">
                     <h1 class="subtitle">Infrastructure</h1>
                     <p>Docker</p>
-                    <p>Git</p>
                     <p>Jenkins</p>
-                    <p>GitLab CI</p>
-                    <p>GitHub Actions</p>
-                    <p>AWS</p>
-                    <p>Google Cloud Platform</p>
-                    <p>Microsoft Azure</p>
-                </div>
-            
-                <div class="col">
-                    <h1 class="subtitle">SQL Databases</h1>
-                    <p>MySQL</p>
-                    <p>PostgreSQL</p>
-                    <p>SQL Server</p>
-                    <p>Oracle Database</p>
-                    <p>SQLite</p>
-                </div>
-            
-                <div class="col">
-                    <h1 class="subtitle">NoSQL Databases</h1>
-                    <p>MongoDB</p>
-                    <p>Redis</p>
-                    <p>Firebase</p>
-                    <p>Elasticsearch</p>
+                    <p>GitLab CI and GitHub Actions</p>
+                    <p>AWS, Google Cloud Platform, Microsoft Azure</p>
                 </div>
             
                 <div class="col">
                     <h1 class="subtitle">Others</h1>
                     <p>API Consumer</p>
+                    <p>Git</p>
                     <p>Caching</p>
                     <p>Testing</p>
                 </div>
             </div>
         </section>
 
-        <section>
+        <section style="margin-top: 2rem;">
             <h2 class="title">Experience</h2>
             <article>
                 <h3>Fullstack Software Engineer | Tech Lead</h3>
@@ -130,7 +152,6 @@
                 <p>My work is of utmost importance, as the data I generate is used in our artificial intelligence system, which maps the allocation of public resources within the states. This information serves a crucial purpose and can be utilized by regulatory bodies as a valuable tool in combating corruption and managing public accounts.</p>
                 <p>As a key developer in these projects, I play a key role in assisting team members and developing solutions across multiple programming environments as one of the company's top tech leads., with a particular focus on PHP, which remains the predominant technology. Additionally, I maintain legacy software while also developing and maintaining new software using modern technologies.</p>
             </article>
-            <br>
             <article>
                 <h3>Freelancer</h3>
                 <p>(July 2019 - <span class="blue">Present</span>)</p>
@@ -146,7 +167,7 @@
                 <p>Hyperlocal - (December 2021 - August 2022)</p>
                 <p>Technologies: <b class="blue">Laravel, Javascript, Angular, Yii, Tests, API Integration</b></p>
                 <p>As a programmer, I had the opportunity to lead the development and maintenance of several services for Hyperlocal software designed for CrossFit Boxes. In this role, I worked with a variety of technologies, both modern and legacy, ensuring seamless integration and efficient operation of all system components.</p>
-                <p>When facing technical challenges, I contributed to integrations with external services and third-party APIs, enhancing the software’s functionality and driving continuous improvements. Additionally, I was responsible for maintaining smaller industry-specific software, such as a CrossFit championship management system.</p>
+                <p>When facing technical challenges, I contributed to integrations with external services and third-party APIs, enhancing the software's functionality and driving continuous improvements. Additionally, I was responsible for maintaining smaller industry-specific software, such as a CrossFit championship management system.</p>
                 <p>This broad and diverse experience has allowed me to refine my skills in emerging technologies while also strengthening my ability to manage and maintain existing solutions, ensuring the delivery of high-quality results in industry-specific hyperlocal environments.</p>
             </article>
             <article>
@@ -161,8 +182,8 @@
                 <h3>Backend Developer</h3>
                 <p>SoftExpert Software - (February 2020 - August 2021)</p>
                 <p>Technologies: <b class="blue">PHP, Laravel, Tests, javascript, jQuery</b></p>
-                <p>During my time at SoftExpert, I was responsible for developing the company’s core PHP frameworks. I worked on a range of projects, from maintaining a legacy framework to building a modern framework that incorporated the latest industry best practices.</p>
-                <p>This experience allowed me to tackle diverse challenges and responsibilities, playing a crucial role in the company’s success. In addition to my primary duties, I occasionally contributed to other projects, including client access systems and frameworks in different programming languages.</p>
+                <p>During my time at SoftExpert, I was responsible for developing the company's core PHP frameworks. I worked on a range of projects, from maintaining a legacy framework to building a modern framework that incorporated the latest industry best practices.</p>
+                <p>This experience allowed me to tackle diverse challenges and responsibilities, playing a crucial role in the company's success. In addition to my primary duties, I occasionally contributed to other projects, including client access systems and frameworks in different programming languages.</p>
             </article>
             <article>
                 <h3>Internship</h3>
