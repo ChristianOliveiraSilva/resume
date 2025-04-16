@@ -5,31 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume - Christian de Oliveira Silva</title>
     <link rel="stylesheet" href="style.css">
-
-    <script>
-        function calculateAge() {
-            const birthdateElement = document.querySelector('[data-birthdate]');
-            const birthdateStr = birthdateElement.getAttribute('data-birthdate');
-            
-            const [day, month, year] = birthdateStr.split('-').map(Number);
-            
-            const birthDate = new Date(year, month - 1, day);
-            const today = new Date();
-            
-            let age = today.getFullYear() - birthDate.getFullYear();
-            const monthDiff = today.getMonth() - birthDate.getMonth();
-            
-            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
-                age--;
-            }
-            
-            birthdateElement.textContent = age;
-        }
-        
-        window.onload = function() {
-            calculateAge();
-        }
-    </script>
 </head>
 
 <body>
@@ -37,7 +12,7 @@
         <h1>Christian de Oliveira Silva</h1>
         <p>Senior Full-Stack Developer | Tech Lead | Freelancer | Laravel | Python | TypeScript | React.js</p>
         <p>Technical Course and Bachelor's Degree at IFMS</p>
-        <p><span data-birthdate="23-04-2001"></span> years old | Três Lagoas, MS, Brazil <img class="icon small" src="./assets/brazil.webp"></p>
+        <p>Três Lagoas, MS, Brazil <img class="icon small" src="./assets/brazil.webp"></p>
         <p><img class="icon" src="./assets/WhatsApp.svg.webp"> +55 67 99336-9450 | ✉ christian.oliveira.trabalho@gmail.com</p>
         <p>
             <img class="icon" src="./assets/github.png"> <a href="https://github.com/ChristianOliveiraSilva">ChristianOliveiraSilva</a> |
@@ -49,12 +24,10 @@
         <section>
             <h2 class="title">Summary</h2>
             <p>
-                Experienced Full-Stack Developer with over five years of expertise in PHP, Laravel, Python, TypeScript, Javascript, Vue.js, and React.js and other technologies, specializing in scalable web and mobile applications.
-                Strong background in API development, database management (PostgreSQL & MySQL), and backend optimization for performance and scalability.
-                Proficient in Vue.js, Alpine.js, and Filament, creating dynamic user interfaces and efficient admin panels.
-                Passionate about leveraging technology to solve real-world problems, with extensive experience in community-driven and university-based projects.
-                Skilled in authentication, access control, and automated workflows, delivering well-structured, maintainable, and high-performance solutions.
-                Holds academic experience in Analysis and Systems Development, complementing in 2025.
+                Software Engineer focused on building scalable web and mobile applications with PHP (Laravel), Python, JavaScript/TypeScript, Vue.js, and React.js.
+                <b class="blue">Over 5 years of hands-on experience</b> integrating robust APIs, optimizing backend systems, and managing databases like PostgreSQL and MySQL.
+                Skilled in modern frontend development, delivering clean user interfaces and efficient admin panels. Experienced in authentication, access control, and workflow automation. Actively involved in real-world, community-driven, and university-based projects.
+                Currently completing a degree in Systems Analysis and Development (2025).
             </p>
         </section>
 
@@ -115,8 +88,10 @@
                     <p>Jasmine</p>
                     <p>PHPUnit</p>
                 </div>
-            
+
+                
                 <div class="col">
+                    <br><br><br><br>
                     <h1 class="subtitle">Automation for browsers</h1>
                     <p>Selenium</p>
                     <p>Cypress</p>
@@ -125,6 +100,7 @@
                 </div>
             
                 <div class="col">
+                    <br><br><br><br>
                     <h1 class="subtitle">Infrastructure</h1>
                     <p>Docker</p>
                     <p>Jenkins</p>
